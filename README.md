@@ -1,4 +1,4 @@
-#Project 3 Data Visualization 
+# Project 3 Data Visualization 
 Telling a story through Data Visualization
 
 ## Table of Contents
@@ -9,7 +9,7 @@ Telling a story through Data Visualization
 
 ## Getting Started
 
-##Team Members
+## Team Members
 - Zac Corbett
 - Lynn Hoang
 - Sameer Zubairi

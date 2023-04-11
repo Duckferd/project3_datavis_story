@@ -1,12 +1,12 @@
-#Proposal:
+# Proposal:
 
-##Team Members
+## Team Members
 - Zac Corbett
 - Lynn Hoang
 - Sameer Zubairi
 - Christopher Yang 
 
-##Three Visualizations 
+## Three Visualizations 
 
 - Leaflet Map: interactive heat based map of crime in the Vancouver area
 Dataset: https://www.kaggle.com/datasets/wosaku/crime-in-vancouver
@@ -23,16 +23,16 @@ Dataset: https://www.kaggle.com/datasets/wosaku/crime-in-vancouver
 - Pi Chart or similar (use of library from outside class?): show percentage breakdown of types of crime per timeframe
     - Given a timeframe from dropdown, show breakdown of crime type 
 
-##Beneficiaries/stakeholders
+## Beneficiaries/stakeholders
 Citizens and visitors who want to know how many crimes are committed in a specific area and what type. 
 Citizens: Can determine if there is a prevalence of vandalism or house break-ins
 Visitors: Can determine if there is a prevalence of petty theft and car break-ins
 
-##Product structure (Napkin Sketch)
+## Product structure (Napkin Sketch)
 ![Napkin Sketch](Images/proposal.jpg)
 
 
-##Outline of Plan/Tasks Required for Project
+## Outline of Plan/Tasks Required for Project
 - Kaggle CSV files to put into SQL database (via SQlite or MongoDB)
 - Python Flask API script to store and call data from the database
 - Data Cleaning steps:
