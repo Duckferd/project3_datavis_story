@@ -11,6 +11,8 @@ Telling a story through Data Visualization
 - License
 
 ## GitHub Main 
+- Proposal.md
+    -Initial project proposal 4/11/23. Subject to change for final report.
 
 ## Usage
 
