@@ -12,7 +12,7 @@ Telling a story through Data Visualization
 
 ## GitHub Main 
 - Proposal.md
-    -Initial project proposal 4/11/23. Subject to change for final report.
+    - Initial project proposal 4/11/23. Subject to change for final report.
 
 ## Usage
 
