@@ -1,4 +1,4 @@
-# Proposal:
+# Proposal for Project 3 Data Visualization Story:
 
 ## Team Members
 - Zac Corbett
@@ -31,7 +31,6 @@ Visitors: Can determine if there is a prevalence of petty theft and car break-in
 ## Product structure (Napkin Sketch)
 ![Napkin Sketch](Images/proposal.jpg)
 
-
 ## Outline of Plan/Tasks Required for Project
 - Kaggle CSV files to put into SQL database (via SQlite or MongoDB)
 - Python Flask API script to store and call data from the database
@@ -44,5 +43,5 @@ Visitors: Can determine if there is a prevalence of petty theft and car break-in
     - D3 for grabbing data from API
     - Leaflet for map
     - Plotly for Economic data
-    - Plotly for crime percentage data
-    - Need to find usage for one more library that was not discussed in class
+    - One additional plot for crime as total percentage data
+        - Usually represented with pie chart, but we have opportunity to use new library not discussed in class
