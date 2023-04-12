@@ -38,7 +38,7 @@ Example scenario: A couple moving to Vancouver who wants to settle within Downto
 - Neighbourhoods have to be cleaned and matched between both datasets if Crime Rate is to be included (optional, time permitting for better graph and map integration)
 
 ## Product structure (Napkin Sketch)
-![Napkin Sketch](Images/Proposal.jpg)
+![Napkin Sketch](Images/proposal.jpg)
 
 ## Outline of Plan/Tasks Required for Project
 - All datasets need to be cleaned and put into CSV format
