@@ -1,0 +1,18 @@
+crime
+-
+Type VARCHAR
+Year INTEGER PK
+Month INTEGER
+Latitude VARCHAR
+Longitude VARCHAR
+
+housing
+-
+year INTEGER FK >- crime.Year
+vacancy VARCHAR
+availability VARCHAR
+average_rent VARCHAR
+median_rent VARCHAR
+percent_change VARCHAR
+units INTEGER
+neighbourhood VARCHAR
