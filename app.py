@@ -17,8 +17,8 @@ Base = automap_base()
 Base.prepare(autoload_with=engine)
 
 # # Save reference to the table
-Crime = Base.classes.crime
-Rental = Base.classes.rental
+crime = Base.classes.crime
+rental = Base.classes.rental
 
 # #################################################
 # Flask Setup
@@ -48,9 +48,9 @@ def year():
     #Create session link from Python to the database
     session = Session(engine)
 
-    """Return Vancouver Crime and Rental data from 2010-2017"""
+    """Return Vancouver crime and rental data from 2010-2017"""
     #Query of crime and rental dataset
-    results = session.query(Crime.YEAR, Crime.TYPE, Crime.MONTH, Crime.Latitude, Crime.Longitude, Rental.Year, Rental.Neighbourhood, Rental.PercentVacancyRate, Rental.PercentAvailabilityRate, Rental.AverageRentinDollars, Rental.MedianRentinDollars, Rental.PercentChange, Rental.Units)
+    results = session.query(crime.Year, crime.Type, crime.Month, crime.Latitude, crime.Longitude, rental.Year, rental.Neighbourhood, rental.PercentVacancyRate, rental.PercentAvailabilityRate, rental.AverageRentinDollars, rental.MedianRentinDollars, rental.PercentChange, rental.Units)
 
     session.close()
 
@@ -68,9 +68,9 @@ def crime_type():
     #Create session link from Python to the database
     session = Session(engine)
 
-    """Return Vancouver Crime data from 2010-2017"""
+    """Return Vancouver crime data from 2010-2017"""
     #Query of crime dataset
-    results = session.query(Crime.YEAR, Crime.TYPE, Crime.MONTH, Crime.Latitude, Crime.Longitude)
+    results = session.query(crime.YEAR, crime.TYPE, crime.MONTH, crime.Latitude, crime.Longitude)
 
     session.close()
 
@@ -90,7 +90,7 @@ def neighbourhood():
 
     """Return Vancouver rental data from 2010-2017"""
     #Query of crime dataset
-    results = session.query(Rental.Year, Rental.Neighbourhood, Rental.PercentVacancyRate, Rental.PercentAvailabilityRate, Rental.AverageRentinDollars, Rental.MedianRentinDollars, Rental.PercentChange, Rental.Units)
+    results = session.query(rental.Year, rental.Neighbourhood, rental.PercentVacancyRate, rental.PercentAvailabilityRate, rental.AverageRentinDollars, rental.MedianRentinDollars, rental.PercentChange, rental.Units)
 
     session.close()
 
