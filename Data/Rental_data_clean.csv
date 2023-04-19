@@ -1,0 +1,209 @@
+Neighbourhood,Vacancy Rate (%),Availability Rate (%),Average Rent ($),Median Rent ($),% Change,Units,Year
+West End/Stanley Park,0.8,1.7,1148,1050,3.1,3876,2010
+English Bay,1.0,1.7,1106,1050,3.0,6695,2010
+Downtown,1.3,1.9,1170,1100,2.4,10131,2010
+South Granville/Oak,1.4,2.0,1083,1000,2.3,7453,2010
+Kitsilano/Point Grey,0.8,1.4,1097,1050,4.1,6937,2010
+Westside/Kerrisdale,1.9,3.6,1315,1200,3.4,3079,2010
+Marpole,2.2,3.3,842,815,1.9,4034,2010
+Mount Pleasant/Renfrew Heights,1.0,1.7,897,850,7.0,5966,2010
+East Hastings,1.9,2.4,869,825,2.4,4983,2010
+Southeast Vancouver,0.9,1.4,992,963,3.9,1979,2010
+University Endowment Lands,0.5,0.5,1561,1455,2.5,1096,2010
+Central Park/Metrotown,2.2,3.3,939,875,2.3,6424,2010
+Southeast Burnaby,3.8,4.2,818,795,0.9,2376,2010
+North Burnaby,2.4,2.9,983,900,0.0,4223,2010
+New Westminster,3.2,4.2,825,800,2.9,8003,2010
+North Vancouver City,1.1,1.4,976,950,2.1,5872,2010
+North Vancouver DM,1.4,2.8,1210,1120,1.2,1361,2010
+West Vancouver,0.6,1.2,1459,1325,2.1,2341,2010
+Richmond,1.5,2.0,1065,1030,1.9,3137,2010
+Delta,1.2,1.7,832,790,1.7,1634,2010
+Surrey,4.0,5.2,832,815,1.6,5789,2010
+White Rock,1.8,2.9,855,825,1.7,1402,2010
+Langley City and Langley DM,4.2,5.0,836,815,1.4,2291,2010
+Tri-Cities,3.1,4.3,917,845,2.0,4961,2010
+Maple Ridge/Pitt Meadows,3.2,4.3,774,750,1.0,1544,2010
+Vancouver,1.9,2.7,1006,930,2.6,107587,2010
+West End/Stanley Park,0.3,0.9,1161,1050,1.7,3873,2011
+English Bay,1.1,1.4,1142,1100,4.2,6667,2011
+Downtown,0.4,1.1,1252,1150,2.6,10131,2011
+South Granville/Oak,0.6,1.2,1134,1050,3.2,7551,2011
+Kitsilano/Point Grey,0.6,1.1,1173,1100,2.4,6997,2011
+Westside/Kerrisdale,1.3,2.1,1327,1200,2.7,3050,2011
+Marpole,0.9,2.3,846,820,1.4,4032,2011
+Mount Pleasant/Renfrew Heights,0.6,1.0,942,900,2.5,6228,2011
+East Hastings,0.8,1.6,886,850,4.0,4931,2011
+Southeast Vancouver,1.1,3.0,1010,990,2.1,1976,2011
+University Endowment Lands,0.4,0.5,1645,1580,2.0,1168,2011
+Central Park/Metrotown,1.8,2.2,950,879,1.2,6427,2011
+Southeast Burnaby,2.8,3.0,832,800,1.8,2380,2011
+North Burnaby,2.4,3.6,1008,920,3.3,4186,2011
+New Westminster,2.9,4.0,849,800,1.5,7994,2011
+North Vancouver City,0.5,1.4,1006,958,2.3,5872,2011
+North Vancouver DM,0.4,2.4,1227,1150,1.6,1359,2011
+West Vancouver,0.2,1.2,1475,1300,2.5,2340,2011
+Richmond,1.0,1.5,1067,1050,2.1,3136,2011
+Delta,1.5,2.2,838,800,1.2,1590,2011
+Surrey,3.9,4.4,836,809,0.0,5793,2011
+White Rock,0.7,1.8,865,835,1.2,1381,2011
+Langley City and Langley DM,3.2,4.7,852,830,1.9,2266,2011
+Tri-Cities,2.9,4.0,928,850,1.6,4938,2011
+Maple Ridge/Pitt Meadows,4.0,5.1,807,760,4.3,1540,2011
+Vancouver,1.4,2.2,1037,950,2.3,107806,2011
+West End/Stanley Park,0.8,1.4,1200,1100,3.7,3877,2012
+English Bay,1.0,1.8,1174,1100,2.9,6684,2012
+Downtown,1.0,2.4,1277,1150,2.9,10005,2012
+South Granville/Oak,0.7,1.5,1163,1085,2.1,7600,2012
+Kitsilano/Point Grey,1.3,2.1,1169,1100,2.7,7135,2012
+Westside/Kerrisdale,1.5,1.9,1332,1200,1.8,2988,2012
+Marpole,1.6,2.4,878,850,3.2,4015,2012
+Mount Pleasant/Renfrew Heights,0.9,1.6,969,900,3.1,6168,2012
+East Hastings,1.2,1.8,935,890,2.7,5026,2012
+Southeast Vancouver,1.5,3.1,1033,1000,2.2,2058,2012
+University Endowment Lands,0.4,0.4,1603,1544,-0.6,1122,2012
+Central Park/Metrotown,1.7,2.9,966,895,1.7,6375,2012
+Southeast Burnaby,2.5,3.9,856,830,2.2,2385,2012
+North Burnaby,2.9,3.9,1025,950,2.0,4194,2012
+New Westminster,2.2,3.1,866,815,1.7,8051,2012
+North Vancouver City,0.9,1.8,1027,975,2.7,5858,2012
+North Vancouver DM,0.8,2.5,1294,1175,4.9,1372,2012
+West Vancouver,0.9,1.7,1516,1400,4.4,2341,2012
+Richmond,2.0,3.0,1104,1080,1.3,3218,2012
+Delta,1.8,2.2,868,820,4.1,1580,2012
+Surrey,5.7,6.0,833,800,0.2,5907,2012
+White Rock,3.3,3.7,883,850,2.8,1397,2012
+Langley City and Langley DM,4.3,4.8,855,830,0.0,2326,2012
+Tri-Cities,3.2,4.4,934,875,0.6,4941,2012
+Maple Ridge/Pitt Meadows,4.6,5.7,827,770,2.4,1523,2012
+Vancouver,1.8,2.7,1058,975,2.3,108146,2012
+West End/Stanley Park,0.8,1.7,1239,1135,3.1,3877,2013
+English Bay,0.7,1.6,1202,1150,1.8,6732,2013
+Downtown,1.0,2.1,1251,1200,2.1,10163,2013
+South Granville/Oak,1.1,1.8,1196,1100,3.0,7610,2013
+Kitsilano/Point Grey,0.8,1.5,1205,1143,2.4,7133,2013
+Westside/Kerrisdale,1.1,1.7,1343,1200,0.0,2974,2013
+Marpole,2.4,2.8,889,850,1.5,4012,2013
+Mount Pleasant/Renfrew Heights,0.4,1.1,998,930,3.5,6343,2013
+East Hastings,1.4,2.0,938,895,1.3,5046,2013
+Southeast Vancouver,1.5,2.8,1063,1035,1.7,2049,2013
+University Endowment Lands,0.4,1.2,1640,1557,2.3,1123,2013
+Central Park/Metrotown,1.6,2.6,981,900,1.6,6364,2013
+Southeast Burnaby,2.3,3.2,877,850,2.7,2354,2013
+North Burnaby,2.5,3.3,1037,950,1.7,4167,2013
+New Westminster,2.2,3.0,885,842,1.9,7982,2013
+North Vancouver City,0.9,1.6,1073,1039,3.4,5827,2013
+North Vancouver DM,1.2,2.6,1401,1200,5.5,1393,2013
+West Vancouver,0.8,1.4,1508,1300,0.0,2341,2013
+Richmond,3.0,3.8,1143,1100,0.7,3340,2013
+Delta,2.6,2.6,892,842,1.9,1640,2013
+Surrey,4.2,4.4,867,850,4.0,5917,2013
+White Rock,3.9,4.2,884,850,0.0,1393,2013
+Langley City and Langley DM,2.3,3.4,896,850,5.6,2336,2013
+Tri-Cities,3.2,4.5,943,875,1.3,5056,2013
+Maple Ridge/Pitt Meadows,3.7,4.9,818,765,-1.0,1494,2013
+Vancouver,1.7,2.5,1078,1000,2.2,108666,2013
+West End/Stanley Park,0.5,0.9,1261,1165,1.8,3856,2014
+English Bay,0.2,0.7,1253,1200,3.9,6794,2014
+Downtown,0.3,1.2,1291,1235,3.5,10120,2014
+South Granville/Oak,0.6,1.1,1223,1135,1.2,7744,2014
+Kitsilano/Point Grey,0.3,0.8,1257,1200,2.4,7175,2014
+Westside/Kerrisdale,1.0,1.3,1295,1244,1.2,2956,2014
+Marpole,0.7,1.7,909,875,1.7,3958,2014
+Mount Pleasant/Renfrew Heights,0.5,0.8,1035,963,3.9,6343,2014
+East Hastings,0.8,1.1,970,910,3.8,5115,2014
+Southeast Vancouver,1.2,1.6,1089,1055,1.6,2115,2014
+University Endowment Lands,0.2,0.5,1644,1575,1.4,1405,2014
+Central Park/Metrotown,0.9,1.5,1013,920,2.4,6158,2014
+Southeast Burnaby,2.1,2.3,889,875,1.0,2329,2014
+North Burnaby,1.5,1.9,1091,1050,5.3,4131,2014
+New Westminster,1.4,1.8,922,863,3.6,8009,2014
+North Vancouver City,0.5,1.0,1098,1035,1.7,5909,2014
+North Vancouver DM,0.7,1.2,1400,1262,1.9,1392,2014
+West Vancouver,0.7,1.5,1606,1458,7.1,2340,2014
+Richmond,1.6,2.0,1158,1105,1.2,3479,2014
+Delta,3.6,5.2,907,863,1.9,1724,2014
+Surrey,2.4,3.2,879,850,0.9,5833,2014
+White Rock,1.5,2.0,890,842,0.0,1395,2014
+Langley City and Langley DM,2.4,3.8,882,850,0.0,2343,2014
+Tri-Cities,1.5,2.9,958,895,0.8,5085,2014
+Maple Ridge/Pitt Meadows,2.6,2.9,816,783,0.5,1509,2014
+Vancouver,1.0,1.6,1110,1035,2.5,109217,2014
+West End/Stanley Park,0.5,0.9,1336,1250,6.1,3876,2015
+English Bay,0.3,0.6,1341,1300,6.4,6789,2015
+Downtown,0.6,1.1,1366,1290,4.6,10385,2015
+South Granville/Oak,0.6,0.9,1267,1190,5.0,7790,2015
+Kitsilano/Point Grey,0.6,1.1,1286,1200,3.9,7187,2015
+Westside/Kerrisdale,1.6,2.1,1397,1287,2.7,2965,2015
+Marpole,1.0,1.4,928,900,3.2,4003,2015
+Mount Pleasant/Renfrew Heights,0.4,0.6,1077,1000,3.3,6362,2015
+East Hastings,0.5,0.9,1015,950,2.3,5095,2015
+Southeast Vancouver,1.0,1.1,1122,1100,2.2,2066,2015
+University Endowment Lands,0.1,0.3,1720,1620,4.5,1403,2015
+Central Park/Metrotown,1.3,1.7,1045,934,3.4,6159,2015
+Southeast Burnaby,1.2,1.4,905,878,2.0,2362,2015
+North Burnaby,1.0,1.6,1112,1075,1.7,4124,2015
+New Westminster,0.9,1.2,933,875,2.6,8068,2015
+North Vancouver City,0.4,1.1,1163,1100,4.0,6059,2015
+North Vancouver DM,0.8,1.2,1462,1300,2.7,1368,2015
+West Vancouver,0.5,0.9,1669,1475,4.4,2341,2015
+Richmond,1.0,1.2,1223,1170,5.3,3477,2015
+Delta,0.6,1.0,920,875,0.8,1724,2015
+Surrey,1.9,2.0,898,865,3.2,5901,2015
+White Rock,0.8,1.5,918,860,3.5,1378,2015
+Langley City and Langley DM,1.5,1.7,943,898,5.0,2396,2015
+Tri-Cities,1.1,1.6,1005,938,6.2,5191,2015
+Maple Ridge/Pitt Meadows,1.5,1.7,858,800,4.5,1555,2015
+Vancouver,0.8,1.2,1156,1073,3.9,110024,2015
+West End/Stanley Park,0.6,0.7,1418,1350,5.3,3874,2016
+English Bay,0.8,0.8,1473,1438,10.7,6770,2016
+Downtown,0.5,2.3,1476,1395,6.4,10664,2016
+South Granville/Oak,0.7,1.4,1359,1280,7.6,7805,2016
+Kitsilano/Point Grey,1.2,1.6,1392,1328,8.7,7215,2016
+Westside/Kerrisdale,2.0,2.4,1454,1385,4.1,3084,2016
+Marpole,0.6,0.8,985,933,6.3,4000,2016
+Mount Pleasant/Renfrew Heights,0.8,0.8,1148,1075,7.5,6443,2016
+East Hastings,0.8,1.1,1061,1000,4.3,5313,2016
+Southeast Vancouver,0.8,1.4,1239,1173,3.6,2175,2016
+University Endowment Lands,0.0,0.2,1766,1651,2.5,1403,2016
+Central Park/Metrotown,0.8,1.0,1125,1000,7.4,6045,2016
+Southeast Burnaby,0.7,0.9,970,934,6.2,2361,2016
+North Burnaby,1.0,1.9,1193,1115,6.4,4135,2016
+New Westminster,0.4,0.6,993,938,5.1,8110,2016
+North Vancouver CY,0.3,1.1,1249,1200,6.7,6047,2016
+North Vancouver DM,0.3,0.4,1517,1375,3.2,1580,2016
+West Vancouver,0.2,0.6,1746,1581,5.3,2341,2016
+Richmond,0.9,1.1,1304,1200,6.1,3471,2016
+Delta,0.0,0.3,963,895,5.9,1727,2016
+Surrey,0.4,0.7,960,925,7.4,5892,2016
+White Rock,0.1,0.1,943,900,2.2,1377,2016
+Langley City and Langley DM,1.0,1.3,1046,981,8.8,2409,2016
+Tri-Cities,1.6,2.1,1042,975,3.7,5086,2016
+Maple Ridge/Pitt Meadows,0.4,0.7,864,863,0.0,1646,2016
+Vancouver,0.7,1.2,1236,1150,6.4,110973,2016
+West End/Stanley Park,1.0,1.2,1436,1375,4.9,3870,2017
+English Bay,1.3,1.5,1467,1450,2.4,6789,2017
+Downtown,1.3,2.0,1549,1478,5.6,10622,2017
+South Granville/Oak,0.7,1.4,1423,1350,4.7,7872,2017
+Kitsilano/Point Grey,0.7,1.3,1447,1400,3.7,7230,2017
+Westside/Kerrisdale,1.5,1.9,1658,1488,7.0,3094,2017
+Marpole,0.8,1.1,1009,950,3.5,3976,2017
+Mount Pleasant/Renfrew Heights,0.7,1.4,1261,1195,6.3,6521,2017
+East Hastings,0.4,1.3,1182,1072,7.2,5409,2017
+Southeast Vancouver,0.7,1.6,1228,1192,3.5,2179,2017
+University Endowment Lands,0.2,0.4,1891,1760,7.1,1396,2017
+Central Park/Metrotown,0.7,1.5,1186,1100,6.5,5825,2017
+Southeast Burnaby,0.5,0.8,1010,1000,4.1,2350,2017
+North Burnaby,0.4,1.4,1292,1200,9.6,4128,2017
+New Westminster,1.1,1.5,1079,1005,8.9,8325,2017
+North Vancouver CY,1.3,2.1,1337,1260,5.2,6191,2017
+North Vancouver DM,2.6,3.3,1650,1510,7.4,1520,2017
+West Vancouver,0.4,0.5,1833,1650,4.6,2342,2017
+Richmond,0.6,1.1,1326,1265,1.5,3766,2017
+Delta,1.2,1.7,997,925,3.5,1726,2017
+Surrey,0.5,0.9,1025,993,6.9,5892,2017
+White Rock,0.6,1.1,1026,975,7.8,1388,2017
+Langley City and Langley DM,1.4,1.9,1194,1100,4.3,2677,2017
+Tri-Cities,1.2,1.8,1135,1100,10.5,4836,2017
+Maple Ridge/Pitt Meadows,0.5,0.9,920,875,7.6,1627,2017
+Vancouver,0.9,1.5,1308,1213,5.8,111551,2017

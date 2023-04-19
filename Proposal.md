@@ -1,4 +1,7 @@
-# Proposal for Project 3 Data Visualization Story:
+# Proposal for Project 3 Data Visualization Story: Vancity Neighbourhoods Tool
+
+# Project Proposal
+A web based tool for the Vancouver, BC area that helps newcomers looking to settle in the city to determine average rental prices and crime in specific neighbourhoods. The tool will consist of a dashboard that will interactively update maps and statistics as the user makes dropdown selections and moves the map around.
 
 ## Team Members
 - Zac Corbett
@@ -9,10 +12,12 @@
 ## Beneficiaries/stakeholders
 Newcomers to the city who are looking for a place to live/settle in for the first time. These are people who would be interested in understanding average rental and vacancy rates around the city, with a picture of crime in the area. 
 
-Example scenario: A couple moving to Vancouver who wants to settle within Downtown. They want to determine rental price, and specific types of crimes they are worried about in that area, as well as historical information related to crime over the years and rent inflation.
+Example scenario: A couple moving to Vancouver who wants to settle within the Downtown area. They want to determine rental price, and specific types of crimes they are worried about in that area, as well as historical information related to crime over the years and rent inflation.
+
+## Product structure (Napkin Sketch)
+![Napkin Sketch](Images/proposal.jpg)
 
 ## Visualizations 
-
 #### Crime in the Vancouver Area
 - [Dataset Link](https://www.kaggle.com/datasets/wosaku/crime-in-vancouver)
 - Dropdowns/sorting: Type of crime, time (month/year)
@@ -37,12 +42,9 @@ Example scenario: A couple moving to Vancouver who wants to settle within Downto
 - Reduced years to 2010-2017
 - Neighbourhoods have to be cleaned and matched between both datasets if Crime Rate is to be included (optional, time permitting for better graph and map integration)
 
-## Product structure (Napkin Sketch)
-![Napkin Sketch](Images/proposal.jpg)
-
 ## Outline of Plan/Tasks Required for Project
 - All datasets need to be cleaned and put into CSV format
-- CSV files to put into SQL database (via MongoDB)
+- CSV files to put into SQL database (SQLAlchemy or MongoDB)
 - Python Flask API script to store and call data from the database
 - JavaScript Visualizations
     - D3 for grabbing data from API

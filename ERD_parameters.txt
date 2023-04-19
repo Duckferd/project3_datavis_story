@@ -1,0 +1,20 @@
+crime
+-
+id int PK
+Type VARCHAR
+Year INTEGER 
+Month INTEGER
+Latitude VARCHAR
+Longitude VARCHAR
+
+housing
+-
+id int PK
+year INTEGER
+vacancy REAL
+availability REAL
+average_rent INTEGER
+median_rent INTEGER
+percent_change REAL
+units INTEGER
+neighbourhood TEXT
