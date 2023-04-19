@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 </head>
 
-<body>
+<body class="bg-info">
   <div class="container">
     <div class="row">
       <div class="col-md-12 jumbotron text-center">
@@ -18,8 +18,8 @@
       </div>
     </div>
   </div>
-  <!--Drop down menu 1 -->
-  <div class="container">
+  <!--Row 1 - Drop down menu 1 and 2 -->
+  <div class="container text-center">
     <div class="row">
       <div class="col-md-2">
         <div class="well">
@@ -27,47 +27,6 @@
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
       </div>
-
-      <!-- Panel 1 -->
-      <div class="col-md-10">
-        <div class="row">
-          <div class="col-md-3">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Average Rent in Vancouver</h3>
-              </div>
-              <div id="sample-metadata" class="panel-body"></div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Average Rent in Neighbourhood</h3>
-              </div>
-              <div id="sample-metadata" class="panel-body"></div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Units available in Vancouver</h3>
-              </div>
-              <div id="sample-metadata" class="panel-body"></div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Units available in Neighbourhood</h3>
-              </div>
-              <div id="sample-metadata" class="panel-body"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
       <div class="col-md-2">
         <div class="well">
           <h5>Type of Crime :</h5>
@@ -75,19 +34,55 @@
         </div>
       </div>
 
-      <div class="col-md-5">
-        <h3>Vancouver heat map</h3>
-      </div>
+      <div class="col-md-8">
+        <!-- Row 1: Crime rate + Rental rate -->
+        <div class="row">
+          <div class="col-md-6">
+            <div id="line_1">
+              <h3>crime rate</h3>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="line_2">
+              <h3>rental price</h3>
+            </div>
+          </div>
+        </div>
 
-      <div class="col-md-5">
+        <!-- Row 2: Heat map -->
         <div class="row-md">
-          <h3>crime rate</h3>
+          <div id="heat">
+            <h3>Vancouver heat map</h3>
+          </div>
         </div>
-        <div class="row-md">
-          <h3>rental price</h3>
+
+        <!-- Row 3: Most popular crime + Most affordable neighborhood -->
+        <div class="row">
+          <div class="col-md-6">
+            <div id="donut">
+              <h3>Most popular crime</h3>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="list">
+              <h3>Most Affordable Neighbourhood</h3>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
+
+
+
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./static/js/app.js"></script>
+
+</body>
+
+</html>
 
 
 
