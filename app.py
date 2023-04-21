@@ -34,10 +34,33 @@ def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
-        f"/api/v1.0/crime/year<br/>"
-        f"/api/v1.0/crime/year/typeofcrime<br/>"
-        f"/api/v1.0/neighbourhood/year<br/>"
-        f"/api/v1.0/neighbourhood/year/neighbourhood<br/>"
+        f"/api/v1.0/crime/(year)<br/>"
+        f"# Query to return crime data by Sepcific Year<br/>"
+        f"<br/>"
+        f"/api/v1.0/crime/(year)/(typeofcrime)<br/>"
+        f"# Query to return crime data by Specific Year and Type of Crime<br/>"
+        f"<br/>"
+        f"/api/v1.0/crimetype/(year)<br/>"
+        f"# Query to return grouped crime data for specific year<br/>"
+        f"<br/>"
+        f"/api/v1.0/crimeall/<br/>"
+        f"# Query to return total crimes for all years<br/>"
+        f"<br/>"
+        f"/api/v1.0/crimeall/(typeofcrime)<br/>"
+        f"# Query to return sepeific crime count for  all years<br/>"
+        f"<br/>"
+        f"/api/v1.0/neighbourhood/(year)<br/>"
+        f"# Query to return rental data by Specific Year<br/>"
+        f"<br/>"
+        f"/api/v1.0/neighbourhood/(year)/(neighbourhood)<br/>"
+        f"# Query to return rental data only by Specific Year for specific Neighbourhood<br/>"
+        f"<br/>"
+        f"/api/v1.0/neighbourhoodunits<br/>"
+        f"# Query to return total rental units for all Years<br/>"
+        f"<br/>"
+        f"/api/v1.0/neighbourhoodmedrent<br/>"
+        f"# Query to return average rental price for all Years<br/>"
+
     )
 
 #############################################
@@ -81,6 +104,66 @@ def crime_type(year, typeofcrime):
 
     return jsonify(crime_rows)
 
+################################################################
+# Query to return grouped crime data for specific year
+################################################################
+
+@app.route("/api/v1.0/crimetype/<year>")
+def crime_type_group(year):
+    #Create session link from Python to the database
+    session = Session(engine)
+
+    """Query to return grouped crime data for specific year"""
+    #Query of crime dataset
+    results = session.query(crime.Type, func.count(crime.Type)).\
+        filter(crime.Year == int(year)).group_by(crime.Type).all()
+    
+    session.close()
+
+    crime_rows = [{"crime_type": result[0], "count": result[1]} for result in results]
+
+    return jsonify(crime_rows)
+
+##############################################
+# Query to return total crimes for all years
+##############################################
+
+@app.route("/api/v1.0/crimeall/")
+def crime_all_group():
+    #Create session link from Python to the database
+    session = Session(engine)
+
+    """Query to return total crimes for specific all years"""
+    #Query of crime dataset
+    results = session.query(crime.Year, crime.Type, func.count(crime.Type)).\
+        group_by(crime.Year).all()
+    
+    session.close()
+
+    crime_rows = [{"year": result[0], "count": result[2]} for result in results]
+
+    return jsonify(crime_rows)
+
+#######################################################
+# Query to return sepeific crime count for  all years
+#######################################################
+
+@app.route("/api/v1.0/crimeall/<typeofcrime>")
+def crime_year_group(typeofcrime):
+    #Create session link from Python to the database
+    session = Session(engine)
+
+    """# Query to return sepeific crime count for  all years"""
+    #Query of crime dataset
+    results = session.query(crime.Year, crime.Type, func.count(crime.Type)).\
+        filter(crime.Type == typeofcrime).group_by(crime.Year).all()
+    
+    session.close()
+
+    crime_rows = [{"year": result[0], "count": result[2]} for result in results]
+
+    return jsonify(crime_rows)
+
 ###############################################
 # Query to return rental data by Specific Year
 ###############################################
@@ -120,6 +203,47 @@ def neighbourhood_area(year, neighbourhood):
     rental_rows = [{"year": result[0], "neighbourhood": result[1], "vacancy_rate_percent": result[2], "availability_rate_percent" : result[3], "average_rent_dollars": result[4], "median_rent_dollars": result[5], "percent_change": result[6], "units": result[7]} for result in results]
 
     return jsonify(rental_rows)
+
+####################################################
+# Query to return total rental units for all Years
+####################################################
+
+@app.route("/api/v1.0/neighbourhoodunits")
+def neighbourhood_units_all():
+    #Create session link from Python to the database
+    session = Session(engine)
+
+    """# Query to return total rental units for all Years"""
+    #Query of crime dataset
+    results = session.query(rental.Year, rental.Units, func.sum(rental.Units)).\
+    group_by(rental.Year).all()
+
+    session.close()
+
+    rental_rows = [{"year": result[0], "total units": result[2]} for result in results]
+
+    return jsonify(rental_rows)
+
+####################################################
+# Query to return average rental price for all Years
+####################################################
+
+@app.route("/api/v1.0/neighbourhoodmedrent")
+def neighbourhood_medrent_all():
+    #Create session link from Python to the database
+    session = Session(engine)
+
+    """# Query to return total rental units for all Years"""
+    #Query of crime dataset
+    results = session.query(rental.Year, rental.MedianRentinDollars, func.avg(rental.MedianRentinDollars)).\
+    group_by(rental.Year).all()
+
+    session.close()
+
+    rental_rows = [{"year": result[0], "median rental price": result[2]} for result in results]
+
+    return jsonify(rental_rows)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
