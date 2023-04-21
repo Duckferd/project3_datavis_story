@@ -1,0 +1,38 @@
+Vancouver — Rental Market Statistics Summary by Zone
+October 2014 Row / Apartment Bedroom Type - Total
+,Vacancy Rate (%),,Availability Rate (%),,Average Rent ($),,Median Rent ($),,% Change,,Units,
+West End/Stanley Park,0.5,a ,0.9,a ,"1,261",a ,"1,165",a ,1.8,b ,"3,856",
+English Bay,0.2,a ,0.7,a ,"1,253",a ,"1,200",a ,3.9,a ,"6,794",
+Downtown,0.3,a ,1.2,a ,"1,291",a ,"1,235",a ,3.5,a ,"10,120",
+South Granville/Oak,0.6,a ,1.1,a ,"1,223",a ,"1,135",a ,1.2,a ,"7,744",
+Kitsilano/Point Grey,0.3,a ,0.8,a ,"1,257",a ,"1,200",a ,2.4,c ,"7,175",
+Westside/Kerrisdale,1.0,a ,1.3,a ,"1,295",a ,"1,244",a ,1.2,d ,"2,956",
+Marpole,0.7,a ,1.7,a ,909,a ,875,a ,1.7,c ,"3,958",
+Mount Pleasant/Renfrew Heights,0.5,a ,0.8,a ,"1,035",a ,963,a ,3.9,c ,"6,343",
+East Hastings,0.8,a ,1.1,a ,970,a ,910,a ,3.8,c ,"5,115",
+Southeast Vancouver,1.2,a ,1.6,a ,"1,089",a ,"1,055",a ,1.6,b ,"2,115",
+University Endowment Lands,0.2,a ,0.5,a ,"1,644",a ,"1,575",a ,1.4,a ,"1,405",
+Central Park/Metrotown,0.9,a ,1.5,a ,"1,013",a ,920,a ,2.4,a ,"6,158",
+Southeast Burnaby,2.1,a ,2.3,a ,889,a ,875,a ,1.0,a ,"2,329",
+North Burnaby,1.5,a ,1.9,a ,"1,091",a ,"1,050",a ,5.3,b ,"4,131",
+New Westminster,1.4,a ,1.8,a ,922,a ,863,a ,3.6,b ,"8,009",
+North Vancouver City,0.5,a ,1.0,a ,"1,098",a ,"1,035",a ,1.7,c ,"5,909",
+North Vancouver DM,0.7,a ,1.2,a ,"1,400",a ,"1,262",a ,1.9,a ,"1,392",
+West Vancouver,0.7,a ,1.5,a ,"1,606",a ,"1,458",a ,7.1,b ,"2,340",
+Richmond,1.6,a ,2.0,a ,"1,158",a ,"1,105",a ,1.2,a ,"3,479",
+Delta,3.6,a ,5.2,a ,907,a ,863,a ,1.9,a ,"1,724",
+Surrey,2.4,a ,3.2,a ,879,a ,850,a ,0.9,a ,"5,833",
+White Rock,1.5,a ,2.0,a ,890,a ,842,a ,++,,"1,395",
+Langley City and Langley DM,2.4,a ,3.8,a ,882,a ,850,a ,++,,"2,343",
+Tri-Cities,1.5,a ,2.9,a ,958,a ,895,a ,0.8,a ,"5,085",
+Maple Ridge/Pitt Meadows,2.6,a ,2.9,a ,816,a ,783,a ,0.5,a ,"1,509",
+Vancouver,1.0,a ,1.6,a ,"1,110",a ,"1,035",a ,2.5,a ,"109,217",
+
+Notes
+"The following letter codes are used to indicate the reliability of the estimates: a - Excellent, b- Very good, c - Good, d - Fair (Use with Caution)"
+** Data suppressed to protect confidentiality or data not statistically reliable
+++ Change in rent is not statistically significant. This means that the change in rent is not statistically different than zero (0).  (Applies only to % Change of Average Rent Tables).
+ - No units exist in the universe for this category
+n/a: Not applicable
+"CMA, CA and CSD definitions are based on 2011 Census Geography Definitions"
+Source,CMHC Rental Market Survey
