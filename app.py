@@ -9,7 +9,7 @@ from flask import Flask, jsonify
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("sqlite:///Data/vancouver.sqlite", echo=False)
+engine = create_engine("sqlite:///Data/vancouver.sqlite", connect_args={'check_same_thread': False}, echo=False)
 
 # reflect an existing database into a new model
 Base = automap_base()
@@ -35,7 +35,7 @@ def welcome():
     return (
         f"Available Routes:<br/>"
         f"/api/v1.0/crime/(year)<br/>"
-        f"# Query to return crime data by Sepcific Year<br/>"
+        f"# Query to return crime data by Specific Year<br/>"
         f"<br/>"
         f"/api/v1.0/crime/(year)/(typeofcrime)<br/>"
         f"# Query to return crime data by Specific Year and Type of Crime<br/>"
@@ -47,7 +47,7 @@ def welcome():
         f"# Query to return total crimes for all years<br/>"
         f"<br/>"
         f"/api/v1.0/crimeall/(typeofcrime)<br/>"
-        f"# Query to return sepeific crime count for  all years<br/>"
+        f"# Query to return specific crime count for all years<br/>"
         f"<br/>"
         f"/api/v1.0/neighbourhood/(year)<br/>"
         f"# Query to return rental data by Specific Year<br/>"
@@ -100,7 +100,7 @@ def crime_type(year, typeofcrime):
 
     session.close()
 
-    crime_rows = [{"year": result[0], "crime_month": result[1], "crime_latitude" : result[2], "crime_longitude": result[3]} for result in results]
+    crime_rows = [{"year": result[0], "crime_month": result[1], "crime_latitude" : result[3], "crime_longitude": result[4]} for result in results]
 
     return jsonify(crime_rows)
 
@@ -145,7 +145,7 @@ def crime_all_group():
     return jsonify(crime_rows)
 
 #######################################################
-# Query to return sepeific crime count for  all years
+# Query to return Specific crime count for  all years
 #######################################################
 
 @app.route("/api/v1.0/crimeall/<typeofcrime>")
@@ -153,7 +153,7 @@ def crime_year_group(typeofcrime):
     #Create session link from Python to the database
     session = Session(engine)
 
-    """# Query to return sepeific crime count for  all years"""
+    """# Query to return specific crime count for  all years"""
     #Query of crime dataset
     results = session.query(crime.Year, crime.Type, func.count(crime.Type)).\
         filter(crime.Type == typeofcrime).group_by(crime.Year).all()
