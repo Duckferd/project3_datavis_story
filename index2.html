@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0, user-scalable=no />
+    <meta http-equiv=" X-UA-Compatible" content="ie=edge" />
+    <title>Vancity Neighbourhood Tool</title>
+
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+        integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+        crossorigin=""></script>
+
+    <!-- D3 library -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+    <!-- Marker cluster JavaScript code -->
+    <script type="text/javascript"
+        src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Chart.js for Donut Chart -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+        integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+        crossorigin="" />
+
+    <!-- Marker cluster CSS -->
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://unpkg.com/leaflet.markercluster@1.0.3/dist/MarkerCluster.Default.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- Zac added Below for Radio Dropdown Buttons: -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .pos {
+            position: absolute;
+        }
+    </style>
+
+    <!-- Projs4.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js"></script>
+
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>Vancity Neighbourhood Tool</h1>
+                <p>Use the interactive charts below to explore the dataset</p>
+            </div>
+        </div>
+    </div>
+    <!--Row 1 - Drop down menu 1 and 2 -->
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <h5> Year: </h5>
+                            <div id="yearChoice"> Choose Year and Click 'Refresh' to Select </div>
+                        </button>
+                        <!-- Zac Commented out Lynn's dropdown button below - Need to check with LYNN -->
+                        <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+                        <!-- Zac's code continues below with menu options -->
+                        <div class="dropdown-menu">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="yearRadios" id="2010"
+                                        value="2010" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        2010
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="yearRadios" id="2011"
+                                        value="2011" checked>
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        2011
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="yearRadios" id="2012"
+                                        value="2012" checked>
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        2012
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="yearRadios" id="2013"
+                                        value="2013" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        2013
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="yearRadios" id="2014"
+                                        value="2014" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        2014
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="yearRadios" id="2015"
+                                        value="2015" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        2015
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="yearRadios" id="2016"
+                                        value="2016" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        2016
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="yearRadios" id="2017"
+                                        value="2017" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        2017
+                                    </label>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="#">
+                                <button type="button" onclick="refreshDataForYearRadioValue()">
+                                    Refresh
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <script>
+                function refreshDataForYearRadioValue() {
+                    var yearele = document.getElementsByName("yearRadios");
+
+                    for (i = 0; i < yearele.length; i++) {
+                        if (yearele[i].checked)
+                            document.getElementById("yearChoice").innerHTML
+                                = yearele[i].value;
+                        var yearFilter = yearele[i].value;
+                    }
+                }
+            </script> -->
+            <div class="col-md-6">
+                <div class="well">
+                    <!-- Zac's Dropdown Radio List/Radio Group attempt below: -->
+                    <!-- button value set to Crime Type, id set to shorthand of Crime Type -->
+                    <!-- Code from https://stackoverflow.com/questions/70604631/how-to-add-a-radio-button-in-bootstrap-dropdown-options -->
+                    <!-- Can we add dynamic generation of list items based on API call / filter? -->
+                    <!-- Also need to push id of checked option to api route call for graph/map data -->
+                    <!-- Check this site for interaction guide (includes dynamic radio button creation): -->
+                    <!-- https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/ -->
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                            <h5> Type of Crime: </h5>
+                            <div id="crimeChoice"> Choose Crime Type and Click 'Refresh' to Select </br></div>
+                        </button>
+                        <!-- Zac Commented out Lynn's dropdown button below - Need to check with LYNN -->
+                        <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+                        <!-- Zac's code continues below with menu options -->
+                        <div class="dropdown-menu">
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="BandEComm"
+                                        value="Break and Enter Commercial" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Break and Enter Commercial
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="BandEResOth"
+                                        value="Break and Enter Residential/Other" checked>
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Break and Enter Residential/Other
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="Mischief"
+                                        value="Mischief" checked>
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        Mischief
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="OthTheft"
+                                        value="Other Theft" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Other Theft
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="TheftFromVeh"
+                                        value="Theft from Vehicle" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Theft from Vehicle
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="TheftOfBike"
+                                        value="Theft of Bicycle" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Theft of Bicycle
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="TheftOfVehicle"
+                                        value="Theft of Vehicle" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Theft of Vehicle
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="FatalCollision"
+                                        value="Vehicle Collision or Pedestrian Struck (with Fatality)" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Vehicle Collision or Pedestrian Struck (with Fatality)
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="crimeRadios" id="CollisionInjury"
+                                        value="Vehicle Collision or Pedestrian Struck (with Injury)" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Vehicle Collision or Pedestrian Struck (with Injury)
+                                    </label>
+                                </div>
+                            </div>
+                            <a class="dropdown-item" href="#">
+                                <button type="button" onclick="refreshDataForCrimeRadioValue()">
+                                    Refresh
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <script>
+                        function refreshDataForCrimeRadioValue() {
+                            var ele = document.getElementsByName("crimeRadios");
+
+                            for (i = 0; i < ele.length; i++) {
+                                if (ele[i].checked)
+                                    document.getElementById("crimeChoice").innerHTML
+                                        = ele[i].value;
+                                var crimeFilter = ele[i].value
+                            }
+                        }
+                    </script> -->
+                </div>
+            </div>
+        </div> <!-- ^ End of Zac Menu Options Code ^ -->
+
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div id="line_1">
+                    <h3>Crime Rate Chart</h3>
+                    <canvas id="crimeLineChart" style="width:100%;max-width:700px"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="donut">
+                    <h3>Annual Crime Distribution</h3>
+                    <canvas id="donutChart" style="width:100%;max-width:700px"></canvas>
+                </div>
+            </div>
+        </div>
+        <!--Row 2-->
+        <div class="row">
+            <div class="col-md-12">
+                <div id="heat">
+                    <h3>Vancouver heat map</h3>
+
+                    <!-- map div -->
+                    <div id="map" style="height: 500px"></div>
+                    <!-- JavaScript file -->
+                    <!-- <script type="text/javascript" src="static/js/logic5.js"></script> -->
+
+                </div>
+            </div>
+        </div>
+        <!--Row 3-->
+        <div class="row">
+            <div class="col-md-6">
+                <div id="line_2">
+                    <h3>Average Neighbourhood Median Rental by Year</h3>
+                    <canvas id="rentLineChart" style="width:100%;max-width:700px"></canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div id="list">
+                    <h3>Most Affordable Neighbourhood</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <!-- <script src="./static/js/app.js"></script> -->
+        <script src="./static/js/radioBtnChecks.js"></script>
+
+</body>
+
+</html>
