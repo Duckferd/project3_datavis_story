@@ -6,4 +6,3 @@ node_modules
 *.pem
 requirements.txt
 __pycache__/app.cpython-39.pyc
-project_3_datavis_story.code-workspace
