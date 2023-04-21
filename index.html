@@ -21,33 +21,32 @@
   <!--Row 1 - Drop down menu 1 and 2 -->
   <div class="container text-center">
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-4">
         <div class="well">
           <h5>Year :</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
       </div>
-      <div class="col-md-2">
+      <div class="col-md-8">
         <div class="well">
           <h5>Type of Crime :</h5>
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
       </div>
-
-      <div class="col-md-8">
+    </div>
         <!-- Row 1: Crime rate + Rental rate -->
-        <div class="row">
-          <div class="col-md-6">
-            <div id="line_1">
-              <h3>crime rate</h3>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div id="line_2">
-              <h3>rental price</h3>
-            </div>
+    <div class="row">
+        <div class="col-md-6">
+          <div id="line_1">
+            <h3>crime rate</h3>
           </div>
         </div>
+        <div class="col-md-6">
+          <div id="line_2">
+            <h3>rental price</h3>
+          </div>
+        </div>
+    </div>
 
         <!-- Row 2: Heat map -->
         <div class="row-md">
@@ -78,17 +77,7 @@
 
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="./static/js/app.js"></script>
 
-</body>
-
-</html>
-
-
-
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="./static/js/app.js"></script>
 </body>
 
 </html>
