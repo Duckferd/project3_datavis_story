@@ -3,3 +3,6 @@ node_modules
 .env∑
 .code-workspace
 .vscode
+*.pem
+requirements.txt
+__pycache__/app.cpython-39.pyc
