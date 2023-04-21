@@ -78,7 +78,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(myMap);
 
 // Use the following links to get the data.
-var baseURL = "http://54.161.222.176:8080/api/v1.0/";
+var baseURL = "https://54.161.222.176:8080/api/v1.0/";
 
 // Function to initiate data pull
 function refreshAPIcalls(yearFilter, crimeFilter) {
@@ -101,45 +101,45 @@ function refreshAPIcalls(yearFilter, crimeFilter) {
     // ACTIVATE WHEN Frontend on Github Pages:
     //
 
-    // // Get the data with d3.
-    // d3.json(testURL).then(function (response) {
+    // Get the data with d3.
+    d3.json(testURL).then(function (response) {
 
-    //     // Create a new marker cluster group.
-    //     var markers = L.markerClusterGroup();
+        // Create a new marker cluster group.
+        var markers = L.markerClusterGroup();
 
-    //     // Loop through the data.
-    //     for (var i = 0; i < response.length; i++) {
+        // Loop through the data.
+        for (var i = 0; i < response.length; i++) {
+            console.log(response[i])
 
-
-    //         // Add a new marker to the cluster group, and bind a popup.
-    //         markers.addLayer(L.marker([response[i].crime_longitude[0], response.crime_latitude[0]])
-    //             .bindPopup("Crime Type: " + response[i].crime_type[0] + " -  Crime Month: " + response[i].crime_month[0]));
-    //     }
-    //     // Add our marker cluster layer to the map.
-    //     myMap.addLayer(markers);
-    // });
+            // Add a new marker to the cluster group, and bind a popup.
+            markers.addLayer(L.marker([response[i].crime_longitude[0], response.crime_latitude[0]])
+                .bindPopup("Crime Type: " + response[i].crime_type[0] + " -  Crime Month: " + response[i].crime_month[0]));
+        }
+        // Add our marker cluster layer to the map.
+        myMap.addLayer(markers);
+    });
 
 
     // Cluster Marker Testing using API CORS Workaround:
 
-    testingCrimeJson = [{ "crime_latitude": 49.23234363, "crime_longitude": -123.0324753, "crime_month": 1, "crime_type": "Other Theft", "year": 2010 }, { "crime_latitude": 49.20618582, "crime_longitude": -123.1422511, "crime_month": 12, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.23945355, "crime_longitude": -123.0236453, "crime_month": 4, "crime_type": "Theft from Vehicle", "year": 2010 }, { "crime_latitude": 49.24134565, "crime_longitude": -123.178583, "crime_month": 6, "crime_type": "Theft from Vehicle", "year": 2010 }, { "crime_latitude": 49.20571523, "crime_longitude": -123.1376911, "crime_month": 8, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20542281, "crime_longitude": -123.1406606, "crime_month": 4, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20577681, "crime_longitude": -123.1405619, "crime_month": 5, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20542277, "crime_longitude": -123.1403992, "crime_month": 1, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20449851, "crime_longitude": -123.1348013, "crime_month": 4, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20610222, "crime_longitude": -123.125848, "crime_month": 2, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.28245092, "crime_longitude": -123.1182643, "crime_month": 12, "crime_type": "Other Theft", "year": 2010 }, { "crime_latitude": 49.27058278, "crime_longitude": -123.1430687, "crime_month": 7, "crime_type": "Theft from Vehicle", "year": 2010 }, { "crime_latitude": 49.28124255, "crime_longitude": -123.0725686, "crime_month": 10, "crime_type": "Theft from Vehicle", "year": 2010 }, { "crime_latitude": 49.27013974, "crime_longitude": -123.0676202, "crime_month": 12, "crime_type": "Theft of Vehicle", "year": 2010 }, { "crime_latitude": 49.25750072, "crime_longitude": -123.1036065, "crime_month": 9, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.27012444, "crime_longitude": -123.1030674, "crime_month": 9, "crime_type": "Mischief", "year": 2010 }]
-    console.log(testingCrimeJson[0])
-    console.log(testingCrimeJson[0].crime_longitude)
+    // testingCrimeJson = [{ "crime_latitude": 49.23234363, "crime_longitude": -123.0324753, "crime_month": 1, "crime_type": "Other Theft", "year": 2010 }, { "crime_latitude": 49.20618582, "crime_longitude": -123.1422511, "crime_month": 12, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.23945355, "crime_longitude": -123.0236453, "crime_month": 4, "crime_type": "Theft from Vehicle", "year": 2010 }, { "crime_latitude": 49.24134565, "crime_longitude": -123.178583, "crime_month": 6, "crime_type": "Theft from Vehicle", "year": 2010 }, { "crime_latitude": 49.20571523, "crime_longitude": -123.1376911, "crime_month": 8, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20542281, "crime_longitude": -123.1406606, "crime_month": 4, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20577681, "crime_longitude": -123.1405619, "crime_month": 5, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20542277, "crime_longitude": -123.1403992, "crime_month": 1, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20449851, "crime_longitude": -123.1348013, "crime_month": 4, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.20610222, "crime_longitude": -123.125848, "crime_month": 2, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.28245092, "crime_longitude": -123.1182643, "crime_month": 12, "crime_type": "Other Theft", "year": 2010 }, { "crime_latitude": 49.27058278, "crime_longitude": -123.1430687, "crime_month": 7, "crime_type": "Theft from Vehicle", "year": 2010 }, { "crime_latitude": 49.28124255, "crime_longitude": -123.0725686, "crime_month": 10, "crime_type": "Theft from Vehicle", "year": 2010 }, { "crime_latitude": 49.27013974, "crime_longitude": -123.0676202, "crime_month": 12, "crime_type": "Theft of Vehicle", "year": 2010 }, { "crime_latitude": 49.25750072, "crime_longitude": -123.1036065, "crime_month": 9, "crime_type": "Mischief", "year": 2010 }, { "crime_latitude": 49.27012444, "crime_longitude": -123.1030674, "crime_month": 9, "crime_type": "Mischief", "year": 2010 }]
+    // console.log(testingCrimeJson[0])
+    // console.log(testingCrimeJson[0].crime_longitude)
 
-    // Create a new marker cluster group.
-    var markers = L.markerClusterGroup();
+    // // Create a new marker cluster group.
+    // var markers = L.markerClusterGroup();
 
-    // Loop through the data.
-    for (var i = 0; i < testingCrimeJson.length; i++) {
+    // // Loop through the data.
+    // for (var i = 0; i < testingCrimeJson.length; i++) {
 
 
-        // Add a new marker to the cluster group, and bind a popup.
-        markers.addLayer(L.marker([testingCrimeJson[i].crime_latitude, testingCrimeJson[i].crime_longitude])
-            .bindPopup("Crime Type: " + testingCrimeJson[i].crime_type + " -  Crime Month: " + testingCrimeJson[i].crime_month));
-        console.log(testingCrimeJson[i])
-    }
-    // Add our marker cluster layer to the map.
-    myMap.addLayer(markers);
+    //     // Add a new marker to the cluster group, and bind a popup.
+    //     markers.addLayer(L.marker([testingCrimeJson[i].crime_latitude, testingCrimeJson[i].crime_longitude])
+    //         .bindPopup("Crime Type: " + testingCrimeJson[i].crime_type + " -  Crime Month: " + testingCrimeJson[i].crime_month));
+    //     console.log(testingCrimeJson[i])
+    // }
+    // // Add our marker cluster layer to the map.
+    // myMap.addLayer(markers);
 
 
 
@@ -357,9 +357,19 @@ function refreshAPIcalls(yearFilter, crimeFilter) {
     rentLine(rentAvg, rentYears);
 
 
+    // LYNN, Add table script below --------------------------------
 
 
 
 
+
+
+
+
+
+
+
+
+    // LYNN, Add table script above ^^^ --------------------------------
 
 };
