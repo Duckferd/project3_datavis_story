@@ -64,7 +64,7 @@ def welcome():
     )
 
 #############################################
-# Query to return crime data by Sepcific Year
+# Query to return crime data by Specific Year
 #############################################
 
 @app.route("/api/v1.0/crime/<year>")
@@ -100,7 +100,7 @@ def crime_type(year, typeofcrime):
 
     session.close()
 
-    crime_rows = [{"year": result[0], "crime_month": result[1], "crime_latitude" : result[3], "crime_longitude": result[4]} for result in results]
+    crime_rows = [{"year": result[0], "crime_month": result[2], "crime_latitude" : result[3], "crime_longitude": result[4]} for result in results]
 
     return jsonify(crime_rows)
 
