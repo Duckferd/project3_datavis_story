@@ -10,8 +10,8 @@ html {
 }
 
 thead {
-  background: black;
-  color: white;
+  background: gainsboro;
+  color: rgb(16, 2, 2);
 }
 
 table {
@@ -21,4 +21,8 @@ table {
 
 tr:nth-child(even) {
   background: lightblue;
+}
+
+th {
+  text-align: center;
 }

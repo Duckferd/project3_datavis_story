@@ -1,15 +1,23 @@
 // Year Radio function
 
 function refreshDataForYearRadioValue() {
-    let year = document.querySelector('[name=yearRadios]:checked').value;
+  let year = document.querySelector("[name=yearRadios]:checked").value;
 
-    console.log('myyear:',year);
-    d3.json(`/api/v1.0/neighbourhood/${year}`).then(data => {
-        const columns = ['neighbourhood','units','availability_rate_percent','median_rent_dollars']
-        let filterData = data.sort((a, b) => a.average_rent_dollars - b.average_rent_dollars).slice(0, 5);
-        x = filterData;
-        
-        document.getElementById("list").innerHTML = `
+  console.log("myyear:", year);
+  //Create dynamic table
+  d3.json(`/api/v1.0/neighbourhood/${year}`).then((data) => {
+    const columns = [
+      "neighbourhood",
+      "units",
+      "availability_rate_percent",
+      "median_rent_dollars",
+    ];
+    let filterData = data
+      .sort((a, b) => a.average_rent_dollars - b.average_rent_dollars)
+      .slice(0, 5);
+    x = filterData;
+
+    document.getElementById("list").innerHTML = `
         <h3>Most Affordable Neighbourhood</h3>
         <table class="table table-striped">
             <thead class="thead-light">
@@ -23,20 +31,18 @@ function refreshDataForYearRadioValue() {
             </thead>
             <tbody></tbody>
         </table>`;
-        
-        Object.values(filterData).forEach((obj,i) => {
-            let row = d3.select('tbody').append('tr');
 
-            row.append('td').text(i+1);
-            
-            Object.entries(obj).forEach(([key, val]) => {
-                if (columns.includes(key)) row.append('td').text(val);
-            })
-        })
-    })
+    Object.values(filterData).forEach((obj, i) => {
+      let row = d3.select("tbody").append("tr");
 
+      row.append("td").text(i + 1);
 
-
+      Object.entries(obj).forEach(([key, val]) => {
+        if (columns.includes(key)) row.append("td").text(val);
+      });
+    });
+  });
+  //------------------------------
 
   var yearele = document.getElementsByName("yearRadios");
 
@@ -392,8 +398,6 @@ function refreshAPIcalls(yearFilter, crimeFilter) {
   rentLine(rentAvg, rentYears);
 
   // LYNN, Add table script below --------------------------------
-
-  // LYNN, Add table script above ^^^ --------------------------------
 }
 
 const loadAffordableNeighbourhoodTable = () => {
@@ -686,38 +690,6 @@ const loadAffordableNeighbourhoodTable = () => {
     .join("\n");
 
   const rows = d3.csvParseRows(csvStringFromJsonArray);
-    
-    // create table
-    // let table = d3.select("#list").append("table");
-    
-  // append table head
-//   table
-//     .append("thead")
-//     .append("tr")
-//     .selectAll("th")
-//     .data(rows[0])
-//     .enter()
-//     .append("th")
-//     .text(function (d) {
-//       return d;
-//     });
-
-//   // append table body (data)
-//   table
-//     .append("tbody")
-//     .selectAll("tr")
-//     .data(rows.slice(1))
-//     .enter()
-//     .append("tr")
-//     .selectAll("td")
-//     .data(function (d) {
-//       return d;
-//     })
-//     .enter()
-//     .append("td")
-//     .text(function (d) {
-//       return d;
-//     });
 };
 
 loadAffordableNeighbourhoodTable();
