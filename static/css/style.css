@@ -8,3 +8,17 @@ body,
 html {
   height: 100%;
 }
+
+thead {
+  background: black;
+  color: white;
+}
+
+table {
+  margin-top: 40px;
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {
+  background: lightblue;
+}
