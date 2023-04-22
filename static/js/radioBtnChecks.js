@@ -13,7 +13,7 @@ function refreshDataForYearRadioValue() {
       "median_rent_dollars",
     ];
     let filterData = data
-      .sort((a, b) => a.average_rent_dollars - b.average_rent_dollars)
+      .sort((a, b) => a.median_rent_dollars - b.median_rent_dollars)
       .slice(0, 5);
     x = filterData;
 
@@ -24,9 +24,9 @@ function refreshDataForYearRadioValue() {
                 <tr>
                     <th>#</th>
                     <th>Avail %</th>
-                    <th>Available</th>
+                    <th>Median rent ($)</th>
                     <th>Neighbourhood</th>
-                    <th>Median rent</th>
+                    <th>Available Unit</th>
                 </tr>
             </thead>
             <tbody></tbody>
