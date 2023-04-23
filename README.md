@@ -53,6 +53,7 @@ We would like to thank the University of Toronto for putting together a robust p
 
 Some additional resources utilized to complete this project include:
 - [This blog post by Diane Phan on Twilio](https://www.twilio.com/blog/deploy-flask-python-app-aws) explaining how to use a Flask App on AWS
+- [This medium post by Frank Cleary](https://jqn.medium.com/deploy-a-flask-app-on-aws-ec2-1850ae4b0d41) on setting up Apache2 and providing inspiration on how to add our website online
 - ChatGPT was used to explain how to use the CORS_flask wrapper to enable cross origin requests in the flask backend API.
 
 ## License
