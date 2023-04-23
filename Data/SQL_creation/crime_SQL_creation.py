@@ -11,7 +11,7 @@ Path(database_path).touch()
 
 conn = sqlite3.connect(database_path)
 c = conn.cursor()
-csv_crime = pd.read_csv("Data/crime_data_clean.csv")
+csv_crime = pd.read_csv("../Cleaned_Data/crime_data_clean.csv")
 
 csv_crime.to_sql("crime", conn, if_exists='replace', index=True)
 
