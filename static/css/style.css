@@ -25,3 +25,10 @@ table {
 button {
   width: 100%;
 }
+.form-group,
+.form-check {
+  text-align: center;
+}
+.dropdown-menu {
+  width: 100%;
+}
