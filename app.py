@@ -5,8 +5,7 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify
 from flask_cors import CORS
-app = Flask(__name__)
-CORS(app)
+
 
 #################################################
 # Database Setup
@@ -26,7 +25,7 @@ rental = Base.classes.rental
 # Flask Setup
 # #################################################
 app = Flask(__name__)
-
+CORS(app)
 #################################################
 # Flask Routes
 #################################################
