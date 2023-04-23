@@ -25,7 +25,7 @@ rental = Base.classes.rental
 # Flask Setup
 # #################################################
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 #################################################
 # Flask Routes
 #################################################
