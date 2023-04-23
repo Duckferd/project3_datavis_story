@@ -6,8 +6,6 @@ A web based tool for the Vancouver, BC area that helps newcomers looking to sett
 ## Introduction
 The creation of this dashboard tool was intended to help newcomers and long-term visitors to the city of Vancouver who are looking for a place to settle or for a longer term stay. These are people who would be interested in understanding average rental and vacancy rates around the city, with a picture of crime in the area. 
 
-Example scenario: A couple moving to Vancouver who wants to settle within the Downtown area. They want to determine rental price, and specific types of crimes they are worried about in that area; as well as historical information related to crime over the years and rent inflation.
-
 ## Usage
 - Run index.html. This will take information from the flask API backend (hosted on AWS) and output the data onto the dashboard. 
 - Use the dropdowns to select various combinations of years and crime types to get a picture of the city. 
@@ -24,6 +22,7 @@ Example scenario: A couple moving to Vancouver who wants to settle within the Do
 
 ## Datasets
 - [Crime in Vancouver dataset from Kaggle](https://www.kaggle.com/datasets/wosaku/crime-in-vancouver)
+    - Summarized dataset utilizing data from https://opendata.vancouver.ca/pages/home/ with coordinates converted into standard lat/long.
     - Provides comprehensive stats on criminal incidents in Vancouver from 2005-2017
     - Due to rental dataset restrictions, only data from 2010-2017 is used in this tool
 - [Vancouver primary rental housing dataset from CMHC (Canadian Mortgage and Housing Corporation)](https://www03.cmhc-schl.gc.ca/hmip-pimh/en/TableMapChart/Table?TableId=2.1.31.3&GeographyId=2410&GeographyTypeId=3&DisplayAs=Table&GeograghyName=Vancouver)
