@@ -10,19 +10,18 @@ html {
 }
 
 thead {
-  background: gainsboro;
-  color: rgb(16, 2, 2);
+  color: black;
+  text-align: center;
 }
 
+th {
+  text-align: center !important;
+}
 table {
   margin-top: 40px;
   border: 1px solid black;
 }
 
-tr:nth-child(even) {
-  background: lightblue;
-}
-
-th {
-  text-align: center;
+button {
+  width: 100%;
 }

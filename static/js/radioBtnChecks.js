@@ -372,7 +372,7 @@ function refreshAPIcalls(yearFilter, crimeFilter) {
 
     document.getElementById("list").innerHTML = `
         <h3>Most Affordable Neighbourhood</h3>
-        <table class="table table-striped">
+        <table class="table table-bordered">
             <thead class="thead-light">
                 <tr>
                     <th>#</th>
@@ -386,7 +386,42 @@ function refreshAPIcalls(yearFilter, crimeFilter) {
         </table>`;
 
     Object.values(filterData).forEach((obj, i) => {
-      let row = d3.select("tbody").append("tr");
+      let textColor;
+      let bgColor;
+
+      switch (i) {
+        case 0:
+          bgColor = "rgba(9,9,121,1.0)";
+          textColor = "#fff";
+          break;
+
+        case 1:
+          bgColor = "rgba(9,9,121,0.5)";
+          break;
+
+        case 2:
+          bgColor = "rgba(0,212,255,1.0)";
+          break;
+
+        case 3:
+          bgColor = "rgba(189,255,0,0.5)";
+          break;
+
+        case 4:
+          bgColor = "rgba(189,255,0,1.0)";
+          break;
+
+        default:
+          bgColor = "rgba(9,9,121,1.0)";
+          textColor = "#000";
+          break;
+      }
+
+      let row = d3
+        .select("tbody")
+        .append("tr")
+        .style("background-color", bgColor)
+        .style("color", textColor);
 
       row.append("td").text(i + 1);
 
@@ -396,297 +431,3 @@ function refreshAPIcalls(yearFilter, crimeFilter) {
     });
   });
 }
-
-// const loadAffordableNeighbourhoodTable = () => {
-//   var testingNeighTableJSON = [
-//     {
-//       availability_rate_percent: 1.2,
-//       average_rent_dollars: 1436,
-//       median_rent_dollars: 1375,
-//       neighbourhood: "West End/Stanley Park",
-//       percent_change: 4.9,
-//       units: 3870,
-//       vacancy_rate_percent: 1,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.5,
-//       average_rent_dollars: 1467,
-//       median_rent_dollars: 1450,
-//       neighbourhood: "English Bay",
-//       percent_change: 2.4,
-//       units: 6789,
-//       vacancy_rate_percent: 1.3,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 2,
-//       average_rent_dollars: 1549,
-//       median_rent_dollars: 1478,
-//       neighbourhood: "Downtown",
-//       percent_change: 5.6,
-//       units: 10622,
-//       vacancy_rate_percent: 1.3,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.4,
-//       average_rent_dollars: 1423,
-//       median_rent_dollars: 1350,
-//       neighbourhood: "South Granville/Oak",
-//       percent_change: 4.7,
-//       units: 7872,
-//       vacancy_rate_percent: 0.7,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.3,
-//       average_rent_dollars: 1447,
-//       median_rent_dollars: 1400,
-//       neighbourhood: "Kitsilano/Point Grey",
-//       percent_change: 3.7,
-//       units: 7230,
-//       vacancy_rate_percent: 0.7,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.9,
-//       average_rent_dollars: 1658,
-//       median_rent_dollars: 1488,
-//       neighbourhood: "Westside/Kerrisdale",
-//       percent_change: 7,
-//       units: 3094,
-//       vacancy_rate_percent: 1.5,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.1,
-//       average_rent_dollars: 1009,
-//       median_rent_dollars: 950,
-//       neighbourhood: "Marpole",
-//       percent_change: 3.5,
-//       units: 3976,
-//       vacancy_rate_percent: 0.8,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.4,
-//       average_rent_dollars: 1261,
-//       median_rent_dollars: 1195,
-//       neighbourhood: "Mount Pleasant/Renfrew Heights",
-//       percent_change: 6.3,
-//       units: 6521,
-//       vacancy_rate_percent: 0.7,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.3,
-//       average_rent_dollars: 1182,
-//       median_rent_dollars: 1072,
-//       neighbourhood: "East Hastings",
-//       percent_change: 7.2,
-//       units: 5409,
-//       vacancy_rate_percent: 0.4,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.6,
-//       average_rent_dollars: 1228,
-//       median_rent_dollars: 1192,
-//       neighbourhood: "Southeast Vancouver",
-//       percent_change: 3.5,
-//       units: 2179,
-//       vacancy_rate_percent: 0.7,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 0.4,
-//       average_rent_dollars: 1891,
-//       median_rent_dollars: 1760,
-//       neighbourhood: "University Endowment Lands",
-//       percent_change: 7.1,
-//       units: 1396,
-//       vacancy_rate_percent: 0.2,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.5,
-//       average_rent_dollars: 1186,
-//       median_rent_dollars: 1100,
-//       neighbourhood: "Central Park/Metrotown",
-//       percent_change: 6.5,
-//       units: 5825,
-//       vacancy_rate_percent: 0.7,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 0.8,
-//       average_rent_dollars: 1010,
-//       median_rent_dollars: 1000,
-//       neighbourhood: "Southeast Burnaby",
-//       percent_change: 4.1,
-//       units: 2350,
-//       vacancy_rate_percent: 0.5,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.4,
-//       average_rent_dollars: 1292,
-//       median_rent_dollars: 1200,
-//       neighbourhood: "North Burnaby",
-//       percent_change: 9.6,
-//       units: 4128,
-//       vacancy_rate_percent: 0.4,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.5,
-//       average_rent_dollars: 1079,
-//       median_rent_dollars: 1005,
-//       neighbourhood: "New Westminster",
-//       percent_change: 8.9,
-//       units: 8325,
-//       vacancy_rate_percent: 1.1,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 2.1,
-//       average_rent_dollars: 1337,
-//       median_rent_dollars: 1260,
-//       neighbourhood: "North Vancouver CY",
-//       percent_change: 5.2,
-//       units: 6191,
-//       vacancy_rate_percent: 1.3,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 3.3,
-//       average_rent_dollars: 1650,
-//       median_rent_dollars: 1510,
-//       neighbourhood: "North Vancouver DM",
-//       percent_change: 7.4,
-//       units: 1520,
-//       vacancy_rate_percent: 2.6,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 0.5,
-//       average_rent_dollars: 1833,
-//       median_rent_dollars: 1650,
-//       neighbourhood: "West Vancouver",
-//       percent_change: 4.6,
-//       units: 2342,
-//       vacancy_rate_percent: 0.4,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.1,
-//       average_rent_dollars: 1326,
-//       median_rent_dollars: 1265,
-//       neighbourhood: "Richmond",
-//       percent_change: 1.5,
-//       units: 3766,
-//       vacancy_rate_percent: 0.6,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.7,
-//       average_rent_dollars: 997,
-//       median_rent_dollars: 925,
-//       neighbourhood: "Delta",
-//       percent_change: 3.5,
-//       units: 1726,
-//       vacancy_rate_percent: 1.2,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 0.9,
-//       average_rent_dollars: 1025,
-//       median_rent_dollars: 993,
-//       neighbourhood: "Surrey",
-//       percent_change: 6.9,
-//       units: 5892,
-//       vacancy_rate_percent: 0.5,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.1,
-//       average_rent_dollars: 1026,
-//       median_rent_dollars: 975,
-//       neighbourhood: "White Rock",
-//       percent_change: 7.8,
-//       units: 1388,
-//       vacancy_rate_percent: 0.6,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.9,
-//       average_rent_dollars: 1194,
-//       median_rent_dollars: 1100,
-//       neighbourhood: "Langley City and Langley DM",
-//       percent_change: 4.3,
-//       units: 2677,
-//       vacancy_rate_percent: 1.4,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.8,
-//       average_rent_dollars: 1135,
-//       median_rent_dollars: 1100,
-//       neighbourhood: "Tri-Cities",
-//       percent_change: 10.5,
-//       units: 4836,
-//       vacancy_rate_percent: 1.2,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 0.9,
-//       average_rent_dollars: 920,
-//       median_rent_dollars: 875,
-//       neighbourhood: "Maple Ridge/Pitt Meadows",
-//       percent_change: 7.6,
-//       units: 1627,
-//       vacancy_rate_percent: 0.5,
-//       year: 2017,
-//     },
-//     {
-//       availability_rate_percent: 1.5,
-//       average_rent_dollars: 1308,
-//       median_rent_dollars: 1213,
-//       neighbourhood: "Vancouver",
-//       percent_change: 5.8,
-//       units: 111551,
-//       vacancy_rate_percent: 0.9,
-//       year: 2017,
-//     },
-//   ];
-
-//   const sortedNeighbourhoodsByRent = testingNeighTableJSON.sort((a, b) => {
-//     return a.median_rent_dollars - b.median_rent_dollars;
-//   });
-
-//   const csvStringFromJsonArray = [
-//     [
-//       "No.",
-//       "Neighbourhood",
-//       "Available units",
-//       "Vacancy rate (%)",
-//       "Median rent ($)",
-//     ],
-//     ...sortedNeighbourhoodsByRent
-//       .map((item, index) => [
-//         index + 1,
-//         item.neighbourhood,
-//         item.units,
-//         item.vacancy_rate_percent,
-//         item.median_rent_dollars,
-//       ])
-//       .slice(0, 5),
-//   ]
-//     .map((e) => e.join(","))
-//     .join("\n");
-
-//   const rows = d3.csvParseRows(csvStringFromJsonArray);
-// };
-
-// loadAffordableNeighbourhoodTable();
