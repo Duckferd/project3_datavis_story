@@ -1,7 +1,7 @@
 # Project 3: Telling a story through Data Visualization
 
 ## The Vancity Neighbourhood Tool
-A web based tool for the Vancouver, BC area that helps newcomers looking to settle in the city to determine average rental prices and crime in specific neighbourhoods. The tool will consist of a dashboard that will interactively update maps and statistics as the user makes dropdown selections and moves the map around.
+A web based tool for the Vancouver, BC area that helps newcomers and visitors looking to settle in the city to determine average rental prices and crime in specific neighbourhoods. The tool will consist of a dashboard that will interactively update maps and statistics as the user makes dropdown selections and moves the map around.
 
 ## Introduction
 The creation of this dashboard tool was intended to help newcomers and long-term visitors to the city of Vancouver who are looking for a place to settle or for a longer term stay. These are people who would be interested in understanding average rental and vacancy rates around the city, with a picture of crime in the area. 
