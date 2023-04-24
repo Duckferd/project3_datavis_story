@@ -6,6 +6,10 @@ A web based tool for the Vancouver, BC area that helps newcomers and visitors lo
 ## Introduction
 The creation of this dashboard tool was intended to help newcomers and long-term visitors to the city of Vancouver who are looking for a place to settle or for a longer term stay. These are people who would be interested in understanding average rental and vacancy rates around the city, with a picture of crime in the area. 
 
+## Presentation
+
+https://docs.google.com/presentation/d/1PmB7mE_2XLfujeKSUB3rMTX_VC_1qD9d8tV9Xqsga60/edit#slide=id.p
+
 ## Usage
 - Run index.html. This will take information from the flask API backend (hosted on AWS) and output the data onto the dashboard. 
 - Use the dropdowns to select various combinations of years and crime types to get a picture of the city. 

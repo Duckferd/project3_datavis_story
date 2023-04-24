@@ -25,6 +25,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
 
+
+
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
         integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
@@ -71,7 +73,7 @@
                 <div class="well">
                     <div class="dropdown">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <h5> Year: </h5>
+                            <h4> Year: </h4>
                             <div id="yearChoice"> Choose Year and Click 'Refresh' to Select </div>
                         </button>
                         <!-- Zac Commented out Lynn's dropdown button below - Need to check with LYNN -->
@@ -82,7 +84,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="yearRadios" id="2010"
                                         value="2010" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="2010">
                                         2010
                                     </label>
                                 </div>
@@ -92,7 +94,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="yearRadios" id="2011"
                                         value="2011" checked>
-                                    <label class="form-check-label" for="exampleRadios2">
+                                    <label class="form-check-label" for="2011">
                                         2011
                                     </label>
                                 </div>
@@ -102,7 +104,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="yearRadios" id="2012"
                                         value="2012" checked>
-                                    <label class="form-check-label" for="exampleRadios3">
+                                    <label class="form-check-label" for="2012">
                                         2012
                                     </label>
                                 </div>
@@ -112,7 +114,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="yearRadios" id="2013"
                                         value="2013" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="2013">
                                         2013
                                     </label>
                                 </div>
@@ -122,7 +124,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="yearRadios" id="2014"
                                         value="2014" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="2014">
                                         2014
                                     </label>
                                 </div>
@@ -132,7 +134,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="yearRadios" id="2015"
                                         value="2015" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="2015">
                                         2015
                                     </label>
                                 </div>
@@ -142,7 +144,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="yearRadios" id="2016"
                                         value="2016" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="2016">
                                         2016
                                     </label>
                                 </div>
@@ -152,7 +154,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="yearRadios" id="2017"
                                         value="2017" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="2017">
                                         2017
                                     </label>
                                 </div>
@@ -169,7 +171,6 @@
             <!-- <script>
                 function refreshDataForYearRadioValue() {
                     var yearele = document.getElementsByName("yearRadios");
-
                     for (i = 0; i < yearele.length; i++) {
                         if (yearele[i].checked)
                             document.getElementById("yearChoice").innerHTML
@@ -189,7 +190,7 @@
                     <!-- https://www.javascripttutorial.net/javascript-dom/javascript-radio-button/ -->
                     <div class="dropdown">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                            <h5> Type of Crime: </h5>
+                            <h4> Type of Crime: </h4>
                             <div id="crimeChoice"> Choose Crime Type and Click 'Refresh' to Select </br></div>
                         </button>
                         <!-- Zac Commented out Lynn's dropdown button below - Need to check with LYNN -->
@@ -200,7 +201,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="BandEComm"
                                         value="Break and Enter Commercial" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="BandEComm">
                                         Break and Enter Commercial
                                     </label>
                                 </div>
@@ -209,9 +210,9 @@
                             <div class="form-group">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="BandEResOth"
-                                        value="Break and Enter Residential/Other" checked>
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        Break and Enter Residential/Other
+                                        value="Break and Enter Residential" checked>
+                                    <label class="form-check-label" for="BandEResOth">
+                                        Break and Enter Residential
                                     </label>
                                 </div>
                             </div>
@@ -220,7 +221,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="Mischief"
                                         value="Mischief" checked>
-                                    <label class="form-check-label" for="exampleRadios3">
+                                    <label class="form-check-label" for="Mischief">
                                         Mischief
                                     </label>
                                 </div>
@@ -230,7 +231,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="OthTheft"
                                         value="Other Theft" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="OthTheft">
                                         Other Theft
                                     </label>
                                 </div>
@@ -240,7 +241,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="TheftFromVeh"
                                         value="Theft from Vehicle" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="TheftFromVeh">
                                         Theft from Vehicle
                                     </label>
                                 </div>
@@ -250,7 +251,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="TheftOfBike"
                                         value="Theft of Bicycle" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="TheftOfBike">
                                         Theft of Bicycle
                                     </label>
                                 </div>
@@ -260,7 +261,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="TheftOfVehicle"
                                         value="Theft of Vehicle" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="TheftOfVehicle">
                                         Theft of Vehicle
                                     </label>
                                 </div>
@@ -270,7 +271,7 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="FatalCollision"
                                         value="Vehicle Collision or Pedestrian Struck (with Fatality)" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="FatalCollision">
                                         Vehicle Collision or Pedestrian Struck (with Fatality)
                                     </label>
                                 </div>
@@ -280,13 +281,13 @@
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="crimeRadios" id="CollisionInjury"
                                         value="Vehicle Collision or Pedestrian Struck (with Injury)" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <label class="form-check-label" for="CollisionInjury">
                                         Vehicle Collision or Pedestrian Struck (with Injury)
                                     </label>
                                 </div>
                             </div>
                             <a class="dropdown-item" href="#">
-                                <button type="button" onclick="refreshDataForCrimeRadioValue()">
+                                <button type="button" onclick="refreshDataForCrimeRadioValue();">
                                     Refresh
                                 </button>
                             </a>
@@ -295,7 +296,6 @@
                     <!-- <script>
                         function refreshDataForCrimeRadioValue() {
                             var ele = document.getElementsByName("crimeRadios");
-
                             for (i = 0; i < ele.length; i++) {
                                 if (ele[i].checked)
                                     document.getElementById("crimeChoice").innerHTML
@@ -328,7 +328,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div id="heat">
-                    <h3>Vancouver heat map</h3>
+                    <h3>Vancouver Crime Incidents</h3>
 
                     <!-- map div -->
                     <div id="map" style="height: 500px"></div>
@@ -342,7 +342,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div id="line_2">
-                    <h3>Average Neighbourhood Median Rental by Year</h3>
+                    <h3>Neighbourhood Median Rental Cost</h3>
                     <canvas id="rentLineChart" style="width:100%;max-width:700px"></canvas>
                 </div>
             </div>
@@ -357,7 +357,9 @@
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <!-- <script src="./static/js/app.js"></script> -->
-        <script src="./static/js/radioBtnChecks.js"></script>
+        <!-- <script src="./static/js/radioBtnChecks.js"></script> -->
+        <script src="./static/js/radioBtnChecks2.js"></script>
+        <!-- <script src="./static/js/donutupdate.js"></script> -->
 
 </body>
 
