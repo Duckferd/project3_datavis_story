@@ -8,3 +8,30 @@ body,
 html {
   height: 100%;
 }
+
+thead {
+  color: black;
+  text-align: center;
+}
+
+th {
+  text-align: center !important;
+}
+
+table {
+  margin-top: 40px;
+  border: 1px solid black;
+}
+
+button {
+  width: 100%;
+}
+
+.form-group,
+.form-check {
+  text-align: center;
+}
+
+.dropdown-menu {
+  width: 100%;
+}
