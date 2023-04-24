@@ -254,9 +254,9 @@ def neighbourhood_units_all():
 
     return jsonify(rental_rows)
 
-####################################################
-# Query to return average rental price for all Years
-####################################################
+##############################################################
+# Query to return rental price per neighbourhood for all Years
+##############################################################
 
 @app.route("/api/v1.0/neighbourhoodmedrent")
 def neighbourhood_medrent_all():
@@ -265,15 +265,14 @@ def neighbourhood_medrent_all():
 
     neighbourhoods = ["Southeast Vancouver", "Marpole", "Westside/Kerrisdale", "University Endowment Lands", "Mount Pleasant/Renfrew Heights", "South Granville/Oak", "Kitsilano/Point Grey", "East Hastings", "Downtown", "English Bay", "West End/Stanley Park"]
 
-    """# Query to return total rental units for all Years"""
+    """# Query to return rental price per neighbourhood for all Years"""
     #Query of crime dataset
-    results = session.query(rental.Year, rental.Neighbourhood, rental.MedianRentinDollars, func.avg(rental.MedianRentinDollars)).\
-        filter(rental.Neighbourhood.in_(neighbourhoods)).\
-        group_by(rental.Year).all()
+    results = session.query(rental.Year, rental.Neighbourhood, rental.MedianRentinDollars).\
+        filter(rental.Neighbourhood.in_(neighbourhoods))
 
     session.close()
 
-    rental_rows = [{"year": result[0], "median rental price": result[3]} for result in results]
+    rental_rows = [{"year": result[0], "Neighbourhood": result[1], "median rental price": result[2]} for result in results]
 
     return jsonify(rental_rows)
 
