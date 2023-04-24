@@ -8,7 +8,7 @@ The creation of this dashboard tool was intended to help newcomers and long-term
 
 ## Presentation
 
-https://docs.google.com/presentation/d/1PmB7mE_2XLfujeKSUB3rMTX_VC_1qD9d8tV9Xqsga60/edit#slide=id.p
+[Presentation File for this Project](https://docs.google.com/presentation/d/1PmB7mE_2XLfujeKSUB3rMTX_VC_1qD9d8tV9Xqsga60/edit#slide=id.p)
 
 ## Usage
 - Run index.html. This will take information from the flask API backend (hosted on AWS) and output the data onto the dashboard. 
