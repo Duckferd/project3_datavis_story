@@ -11,9 +11,10 @@ The creation of this dashboard tool was intended to help newcomers and long-term
 [Presentation File for this Project](https://docs.google.com/presentation/d/1PmB7mE_2XLfujeKSUB3rMTX_VC_1qD9d8tV9Xqsga60/edit#slide=id.p)
 
 ## Usage
-- [Click on this link in order to view on the internet!](http://ec2-54-161-222-176.compute-1.amazonaws.com/#)
-- Offline: Run index.html. This will take information from the flask API backend (hosted on AWS) and output the data onto the dashboard. 
-- To run the flask API backend locally, run 'python app.py'
+- [DEPRECATED: Click on this link in order to view on the internet!](http://ec2-54-161-222-176.compute-1.amazonaws.com/#)
+- Offline: 
+    - To run the flask API backend locally, run 'python app.py'
+    - Run index.html. This will take information from the flask API backend and output the data onto the dashboard. 
 - Use the dropdowns to select various combinations of years and crime types to get a picture of the city. 
     - For annual crime distribution, click on specific categories to remove from the pie chart for a better picture of the crime types you are interested in
     - Scroll around the Vancouver heat map to get a wide view of areas with the most crime, and zoom in to specific locations to see specific incidents
