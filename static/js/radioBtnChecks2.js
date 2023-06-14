@@ -77,8 +77,8 @@ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 
 // Use the following link to get the data from the API
-var baseURL = "http://54.161.222.176:8080/api/v1.0/";
-// var baseURL = "http://127.0.0.1:5000/api/v1.0/";
+// var baseURL = "http://54.161.222.176:8080/api/v1.0/";
+var baseURL = "http://127.0.0.1:5000/api/v1.0/";
 
 var donutCounts = [];
 var donutTypes = [];
